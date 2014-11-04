@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8" />
+<title>Test</title>
+<meta name="viewport" content="width=500, initial-scale=1">
+<script type="text/javascript" src="script/soundmanager2.js"></script>
+<script src="script/bar-ui.js"></script>
+<link rel="stylesheet" href="css/bar-ui.css" />
+
+</head>
+
+<body>
+
+
+<!-- fixed, bottom-aligned, full-width player -->
+
+<div id="space"></div>
+
+<div class="sm2-bar-ui full-width fixed">
+
+ <div class="bd sm2-main-controls">
+
+  <div class="sm2-inline-texture"></div>
+  <div class="sm2-inline-gradient"></div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-inline-status">
+
+   <div class="sm2-playlist">
+    <div class="sm2-playlist-target">
+     <!-- playlist <ul> + <li> markup will be injected here -->
+     <!-- if you want default / non-JS content, you can put that here. -->
+     <noscript><p>JavaScript is required.</p></noscript>
+    </div>
+   </div>
+
+   <div class="sm2-progress">
+    <div class="sm2-row">
+    <div class="sm2-inline-time">0:00</div>
+     <div class="sm2-progress-bd">
+      <div class="sm2-progress-track">
+       <div class="sm2-progress-bar"></div>
+       <div class="sm2-progress-ball"><div class="icon-overlay"></div></div>
+      </div>
+     </div>
+     <div class="sm2-inline-duration">0:00</div>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element sm2-volume">
+   <div class="sm2-button-bd">
+    <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
+    <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#prev" title="Previous" class="sm2-inline-button previous">&lt; previous</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#next" title="Next" class="sm2-inline-button next">&gt; next</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#repeat" title="Repeat playlist" class="sm2-inline-button repeat">&infin; repeat</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element">
+	<div class="sm2-button-bd">
+     <a href="#shuffle" title="Shuffle" class="sm2-inline-button shuffle">shuffle</a>
+	</div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element sm2-menu">
+   <div class="sm2-button-bd">
+    <a href="#menu" class="sm2-inline-button menu">menu</a>
+   </div>
+  </div>
+
+ </div>
+
+ <div class="bd sm2-playlist-drawer sm2-element">
+
+  <div class="sm2-inline-texture">
+   <div class="sm2-box-shadow"></div>
+  </div>
+
+  <!-- playlist content is mirrored here -->
+
+  <div class="sm2-playlist-wrapper">
+    <ul class="sm2-playlist-bd">
+     <li><a href="http://web.mit.edu/lilybui/Public/1.mp3"><b>Mozart, The Magic Flute, Queen of the Night aria, no. 14. Edda Moser, soprano. Bavarian State Opera, Munich, Wolfgang Sawallisch, conductor</b></a></li>
+     <li><a href="http://web.mit.edu/lilybui/Public/2.mp3"><b>Georgian S.S.R., chorus, "Tchakrulo," collected by Radio Moscow</b></a></li>
+	 <li><a href="http://web.mit.edu/lilybui/Public/3.mp3"><b>Peru, panpipes and drum, collected by Casa de la Cultura, Lima</b></a></li>
+	 <li><a href="http://web.mit.edu/lilybui/Public/4.mp3"><b>Melancholy Blues, performed by Louis Armstrong and his Hot Seven</b></a></li>
+	 <li><a href="http://web.mit.edu/lilybui/Public/5.mp3"><b>Azerbaijan S.S.R., bagpipes, recorded by Radio Moscow</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/6.mp3"><b>Stravinsky, Rite of Spring, Sacrificial Dance, Columbia Symphony Orchestra, Igor Stravinsky, conductor</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/7.mp3"><b>Bach, The Well-Tempered Clavier, Book 2, Prelude and Fugue in C, No.1. Glenn Gould, piano</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/8.mp3"><b>Beethoven, Fifth Symphony, First Movement, the Philharmonia Orchestra, Otto Klemperer, conductor</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/9.mp3"><b>Bulgaria, "Izlel je Delyo Hagdutin," sung by Valya Balkanska</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/10.mp3"><b>Navajo Indians, Night Chant, recorded by Willard Rhodes</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/11.mp3"><b>Holborne, Paueans, Galliards, Almains and Other Short Aeirs, "The Fairie Round," performed by David Munrow and the Early Music Consort of London</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/12.mp3"><b>Solomon Islands, panpipes, collected by the Solomon Islands Broadcasting Service</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/13.mp3"><b>Peru, wedding song, recorded by John Cohen</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/14.mp3"><b>China, ch'in, "Flowing Streams," performed by Kuan P'ing-hu</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/15.mp3"><b>India, raga, "Jaat Kahan Ho," sung by Surshri Kesar Bai Kerkar</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/16.mp3"><b>"Dark Was the Night," written and performed by Blind Willie Johnson</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/17.mp3"><b>Beethoven, String Quartet No. 13 in B flat, Opus 130, Cavatina, performed by Budapest String Quartet</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/18.mp3"><b>Greetings 1</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/19.mp3"><b>Greetings 2</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/20.mp3"><b>Greetings 3</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/21.mp3"><b>Greetings 4</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/22.mp3"><b>Whales</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/23.mp3"><b>Volcanoes, Earthquake, Thunder</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/24.mp3"><b>Wind, Rain, Surf</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/25.mp3"><b>Footsteps, Heart beat, Laughter</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/26.mp3"><b>Herding Sheep, Blacksmith, Sawing</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/27.mp3"><b>Morse Code, Ships</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/28.mp3"><b>Train</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/29.mp3"><b>Kiss, Mother, and Child</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/30.mp3"><b>Bach, Brandenburg Concerto No. 2 in F. First Movement, Munich Bach Orchestra, Karl Richter, conductor</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/31.mp3"><b>Java, court gamelan, "Kinds of Flowers," recorded by Robert Brown</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/32.mp3"><b>Senegal, percussion, recorded by Charles Duvelle</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/33.mp3"><b>##</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/34.mp3"><b>Australia, Aborigine songs, "Morning Star" and "Devil Bird," recorded by Sandra LeBrun Holmes</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/35.mp3"><b>Mexico, "El Cascabel," performed by Lorenzo Barcelata and the Mariachi México</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/36.mp3"><b>"Johnny B. Goode," written and performed by Chuck Berry</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/37.mp3"><b>##</b></a></li>
+
+     <li><a href="http://web.mit.edu/lilybui/Public/38.mp3"><b>Bach, Gavotte en Rondeaux Partita Nº 3 in E major</b></a></li>
+
+
+
+    </ul>
+  </div>
+
+ </div>
+
+</div>
+
+
+</body>
+</html>
